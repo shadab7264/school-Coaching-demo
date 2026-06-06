@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Future Academy – Patna</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d2240;
+    --navy-mid: #1a3a6b;
+    --navy-light: #2a5298;
+    --gold: #c9982a;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3dc;
+    --cream: #fafaf7;
+    --white: #ffffff;
+    --text: #1a1a2e;
+    --text-muted: #5a6478;
+    --text-light: #94a3b8;
+    --border: #e2e8f0;
+    --green: #16a34a;
+    --red: #dc2626;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--navy);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    box-shadow: 0 2px 20px rgba(13,34,64,0.4);
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+
+  .logo-emblem {
+    width: 40px; height: 40px;
+    background: var(--gold);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .logo-text small {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.65rem;
+    color: var(--gold-light);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 700 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
+    padding: 110px 5% 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,152,42,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 30%;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(42,82,152,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(201,152,42,0.15);
+    border: 1px solid rgba(201,152,42,0.3);
+    color: var(--gold-light);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-btns {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(201,152,42,0.35);
+  }
+
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    transition: all 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+  .hero-stats {
+    display: flex; gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .stat strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    color: var(--gold-light);
+  }
+
+  .stat span {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Hero right */
+  .hero-right { position: relative; z-index: 1; }
+
+  .school-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .school-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+  }
+
+  .notice-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .notice-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .notice-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .dot-gold { background: var(--gold); }
+  .dot-green { background: #4ade80; }
+  .dot-blue { background: #60a5fa; }
+
+  .notice-text {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+  }
+
+  .notice-date {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 0.2rem;
+  }
+
+  .admit-card {
+    background: var(--gold);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .admit-card span {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.95rem;
+  }
+
+  .admit-card a {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .admit-card a:hover { background: var(--navy-mid); }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 5%; }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--navy);
+    margin-bottom: 1rem;
+    letter-spacing: -0.3px;
+  }
+
+  .section-sub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    line-height: 1.75;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .about-visual {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 24px;
+    padding: 2.5rem;
+    color: white;
+  }
+
+  .about-visual h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--gold-light);
+  }
+
+  .value-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .value-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .value-item h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+  }
+
+  .value-item p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+
+  .about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .affiliation-badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--gold-pale);
+    border: 1px solid rgba(201,152,42,0.3);
+    color: var(--navy);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+  }
+
+  /* ── CLASSES ── */
+  .classes { background: var(--cream); }
+
+  .classes-header { margin-bottom: 3rem; }
+
+  .classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .class-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+
+  .class-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(13,34,64,0.1);
+    border-color: var(--gold);
+  }
+
+  .class-emoji { font-size: 2rem; margin-bottom: 0.75rem; }
+
+  .class-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .class-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .class-tag {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gold);
+    background: var(--gold-pale);
+    padding: 0.2rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  /* ── FACILITIES ── */
+  .facilities {
+    background: var(--navy);
+    color: white;
+  }
+
+  .facilities .section-title { color: white; }
+  .facilities .section-sub { color: rgba(255,255,255,0.6); }
+
+  .fac-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .fac-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    transition: background 0.2s;
+  }
+
+  .fac-card:hover { background: rgba(255,255,255,0.1); }
+
+  .fac-icon { font-size: 2rem; margin-bottom: 1rem; }
+
+  .fac-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.4rem;
+  }
+
+  .fac-card p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+  }
+
+  /* ── ADMISSION ── */
+  .admission { background: var(--white); }
+
+  .admission-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  .steps { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .step-num {
+    width: 40px; height: 40px;
+    background: var(--navy);
+    color: var(--gold-light);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .step h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+
+  .step p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Form */
+  .admission-form {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+  }
+
+  .admission-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .admission-form p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+  }
+
+  .form-group { margin-bottom: 1.1rem; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--text);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus { border-color: var(--navy); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--navy);
+    color: var(--gold-light);
+    border: none;
+    padding: 0.95rem;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+    letter-spacing: 0.3px;
+  }
+
+  .submit-btn:hover { background: var(--navy-mid); }
+
+  /* ── CONTACT ── */
+  .contact-strip {
+    background: var(--gold-pale);
+    border-top: 1px solid rgba(201,152,42,0.2);
+    border-bottom: 1px solid rgba(201,152,42,0.2);
+    padding: 3rem 5%;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    width: 48px; height: 48px;
+    background: var(--navy);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-value {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 2rem 5%;
+    font-size: 0.8rem;
+  }
+
+  footer strong { color: rgba(255,255,255,0.85); }
+
+  /* ── DEMO BANNER ── */
+  .demo-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy);
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 999;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    border: 1px solid rgba(201,152,42,0.3);
+  }
+
+  .demo-banner span { color: var(--gold-light); font-weight: 700; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; padding-top: 90px; }
+    .hero-right { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .fac-grid { grid-template-columns: 1fr 1fr; }
+    .admission-wrap { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-strip { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-emblem">🎓</div>
+    <div class="logo-text">
+      Bright Future Academy
+      <small>Est. 2005 · CBSE Affiliated</small>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#facilities">Facilities</a></li>
+    <li><a href="#admission">Admission</a></li>
+    <li><a href="#admission" class="nav-cta">Apply Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🏆 Top Rated School in Patna 2024</div>
+    <h1>Where Every Child<br>Discovers Their<br><em>Bright Future</em></h1>
+    <p>A premier CBSE-affiliated school in Patna providing world-class education, strong values, and a nurturing environment from Nursery to Class XII.</p>
+    <div class="hero-btns">
+      <a href="#admission" class="btn-gold">📋 Apply for Admission</a>
+      <a href="#about" class="btn-outline">Learn More</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>98%</strong><span>Board Result</span></div>
+      <div class="stat"><strong>3,200+</strong><span>Students</span></div>
+      <div class="stat"><strong>19 yrs</strong><span>Excellence</span></div>
+      <div class="stat"><strong>120+</strong><span>Teachers</span></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="school-card">
+      <h3>📢 Latest Notices</h3>
+      <div class="notice-item">
+        <div class="notice-dot dot-gold"></div>
+        <div>
+          <div class="notice-text">Admission Open for Session 2025–26 (Nursery to Class IX)</div>
+          <div class="notice-date">June 5, 2026</div>
+        </div>
+      </div>
+      <div class="notice-item">
+        <div class="notice-dot dot-green"></div>
+        <div>
+          <div class="notice-text">Class X & XII Board Results — 98% pass rate 🎉</div>
+          <div class="notice-date">May 28, 2026</div>
+        </div>
+      </div>
+      <div class="notice-item">
+        <div class="notice-dot dot-blue"></div>
+        <div>
+          <div class="notice-text">Annual Sports Day — June 20, 2026. All parents welcome!</div>
+          <div class="notice-date">May 20, 2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="admit-card">
+      <span>🗓️ Last date to apply: July 15</span>
+      <a href="#admission">Apply Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <h3>Our Core Values</h3>
+      <div class="value-item">
+        <div class="value-icon">📚</div>
+        <div>
+          <h4>Academic Excellence</h4>
+          <p>Consistent 95%+ results in CBSE Board exams for the past 10 years.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🤝</div>
+        <div>
+          <h4>Character Building</h4>
+          <p>We nurture honesty, discipline, and compassion alongside academics.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🌱</div>
+        <div>
+          <h4>Holistic Development</h4>
+          <p>Sports, arts, music, and extracurricular activities for every student.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">💻</div>
+        <div>
+          <h4>Modern Learning</h4>
+          <p>Smart classrooms, digital labs and experiential learning methods.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-label">About Us</div>
+      <h2>19 Years of Shaping<br>Future Leaders</h2>
+      <p>Bright Future Academy was founded in 2005 with a single mission — to provide quality education that goes beyond textbooks. Today, we are one of Patna's most trusted schools, serving over 3,200 students from Nursery to Class XII.</p>
+      <p>Our experienced faculty, modern infrastructure, and child-centric approach ensure that every student reaches their full potential — academically, socially, and personally.</p>
+      <div class="affiliation-badges">
+        <div class="badge">✅ CBSE Affiliated</div>
+        <div class="badge">🏛️ Govt. Recognised</div>
+        <div class="badge">🌟 ISO Certified</div>
+        <div class="badge">🏆 Best School Award 2023</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section class="classes" id="classes">
+  <div class="classes-header">
+    <div class="section-label">Academics</div>
+    <h2 class="section-title">Classes We Offer</h2>
+    <p class="section-sub">Comprehensive education from early childhood to senior secondary — all under one roof.</p>
+  </div>
+  <div class="classes-grid">
+    <div class="class-card">
+      <div class="class-emoji">🧸</div>
+      <h3>Pre-Primary</h3>
+      <p>Nursery, LKG & UKG — playful, activity-based learning.</p>
+      <span class="class-tag">Age 3–5</span>
+    </div>
+    <div class="class-card">
+      <div class="class-emoji">✏️</div>
+      <h3>Primary</h3>
+      <p>Class I–V — strong foundation in Maths, Science & English.</p>
+      <span class="class-tag">Age 6–10</span>
+    </div>
+    <div class="class-card">
+      <div class="class-emoji">📐</div>
+      <h3>Middle School</h3>
+      <p>Class VI–VIII — critical thinking and skill development.</p>
+      <span class="class-tag">Age 11–13</span>
+    </div>
+    <div class="class-card">
+      <div class="class-emoji">🔬</div>
+      <h3>Secondary</h3>
+      <p>Class IX–X — CBSE board preparation with expert faculty.</p>
+      <span class="class-tag">Age 14–15</span>
+    </div>
+    <div class="class-card">
+      <div class="class-emoji">🎓</div>
+      <h3>Sr. Secondary</h3>
+      <p>Class XI–XII — Science & Commerce streams available.</p>
+      <span class="class-tag">Age 16–17</span>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="facilities" id="facilities">
+  <div class="section-label">Infrastructure</div>
+  <h2 class="section-title">World-Class Facilities</h2>
+  <p class="section-sub">We invest in the best infrastructure so students can learn, grow and thrive.</p>
+  <div class="fac-grid">
+    <div class="fac-card">
+      <div class="fac-icon">🖥️</div>
+      <h3>Smart Classrooms</h3>
+      <p>All classrooms equipped with interactive digital boards and projectors.</p>
+    </div>
+    <div class="fac-card">
+      <div class="fac-icon">🔬</div>
+      <h3>Science Labs</h3>
+      <p>Fully equipped Physics, Chemistry and Biology laboratories.</p>
+    </div>
+    <div class="fac-card">
+      <div class="fac-icon">💻</div>
+      <h3>Computer Lab</h3>
+      <p>100+ computers with high-speed internet for digital learning.</p>
+    </div>
+    <div class="fac-card">
+      <div class="fac-icon">📚</div>
+      <h3>Library</h3>
+      <p>10,000+ books, journals, and digital resources for all grades.</p>
+    </div>
+    <div class="fac-card">
+      <div class="fac-icon">⚽</div>
+      <h3>Sports Ground</h3>
+      <p>Large playground with cricket, football, basketball & athletics.</p>
+    </div>
+    <div class="fac-card">
+      <div class="fac-icon">🚌</div>
+      <h3>Safe Transport</h3>
+      <p>GPS-tracked school buses covering all major areas of Patna.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION -->
+<section class="admission" id="admission">
+  <div class="section-label">Admissions 2025–26</div>
+  <h2 class="section-title">Join Our School Family</h2>
+  <div class="admission-wrap">
+    <div>
+      <p class="section-sub" style="margin-bottom:2.5rem;">Applications are open for session 2025–26. Limited seats available. Apply early to secure your child's spot.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div>
+            <h4>Fill the online form</h4>
+            <p>Submit the enquiry form with your child's basic details and preferred class.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div>
+            <h4>School calls you back</h4>
+            <p>Our admission team will call you within 24 hours to discuss next steps.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div>
+            <h4>Visit the school</h4>
+            <p>Come for a campus tour and interact with our teachers and principal.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div>
+            <h4>Confirm admission</h4>
+            <p>Complete documentation and fee payment to confirm your child's seat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="admission-form">
+      <h3>Enquire Now</h3>
+      <p>Fill the form and we'll contact you within 24 hours.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Parent's Name</label>
+          <input type="text" placeholder="Ramesh Kumar">
+        </div>
+        <div class="form-group">
+          <label>Child's Name</label>
+          <input type="text" placeholder="Rohan Kumar">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 98765 43210">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Applying for Class</label>
+          <select>
+            <option>Select class...</option>
+            <option>Nursery</option>
+            <option>LKG / UKG</option>
+            <option>Class I – V</option>
+            <option>Class VI – VIII</option>
+            <option>Class IX – X</option>
+            <option>Class XI – XII</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Session</label>
+          <select>
+            <option>2025 – 2026</option>
+            <option>2026 – 2027</option>
+          </select>
+        </div>
+      </div>
+      <button class="submit-btn" onclick="alert('Thank you! Our admission team will call you within 24 hours. 🎓')">
+        📋 Submit Enquiry
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-strip" id="contact">
+  <div class="contact-item">
+    <div class="contact-icon">📍</div>
+    <div>
+      <div class="contact-label">Address</div>
+      <div class="contact-value">Boring Road, Near Patna Zoo, Patna – 800001</div>
+    </div>
+  </div>
+  <div class="contact-item">
+    <div class="contact-icon">📞</div>
+    <div>
+      <div class="contact-label">Phone</div>
+      <div class="contact-value">+91 98765 43210</div>
+    </div>
+  </div>
+  <div class="contact-item">
+    <div class="contact-icon">🕐</div>
+    <div>
+      <div class="contact-label">School Hours</div>
+      <div class="contact-value">Mon – Sat &nbsp;|&nbsp; 7:30 AM – 2:30 PM</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <strong>Bright Future Academy</strong>, Patna. All rights reserved.</p>
+  <p style="margin-top:0.4rem;">Website designed by <strong>[Your Name / Your Agency]</strong></p>
+</footer>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner">
+  🎓 <span>DEMO SITE</span> — Sample to show what your school's website could look like
+</div>
+
+</body>
+</html>
